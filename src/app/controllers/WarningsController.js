@@ -26,11 +26,11 @@
                 margin: { top: -10, left: -20, right: -20 },
                 x: function (d) { return d.x },
                 y: function (d) { return d.y },
-                showLabels: false,
+                showLabels: true,
                 showLegend: false,
                 title: 'Over 9K',
-                showYAxis: false,
-                showXAxis: false,
+                showYAxis: true,
+                showXAxis: true,
                 tooltip: { contentGenerator: function (d) { return '<span class="custom-tooltip">' + Math.round(d.point.y) + '</span>' } }
             }
         };

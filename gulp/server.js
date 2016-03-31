@@ -9,10 +9,9 @@ var util = require('util');
 var browserSync = require('browser-sync');
 
 var middleware = require('./proxy');
-
 function browserSyncInit(baseDir, files, browser) {
+  console.log(baseDir);
   browser = browser === undefined ? 'default' : browser;
-
   var routes = null;
   if(baseDir === paths.src || (util.isArray(baseDir) && baseDir.indexOf(paths.src) !== -1)) {
     routes = {
@@ -27,10 +26,10 @@ function browserSyncInit(baseDir, files, browser) {
       middleware: middleware,
       routes: routes
     },
+    port: 3000,
     browser: browser
   });
 }
-
 gulp.task('serve', ['watch'], function () {
   browserSyncInit([
     paths.tmp + '/serve',

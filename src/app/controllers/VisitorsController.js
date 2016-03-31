@@ -21,8 +21,8 @@
                 valueFormat: (d3.format(".0f")),
                 color: ['rgb(240, 250, 36)', '#000'],
                 showLabels: false,
-                showLegend: false,
-                title: 'Over 9K',
+                showLegend: true,
+                title: '',
                 margin: { top: -10 }
             }
         };
